@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p>Función sin Nombre que reacciona a un evento en este caso al click. ejecutara la acción</p>
+    <pre> <code class="language-javascript">
+        const miBoton = document.getElementById("miBoton");
+        miBoton.addEventListener("click", () => { console.log("El botón fue clickeado.")});
+    </code></pre>
+    <input type="button" value="Enviar" id="miBoton">
+
+    <h2>Calculadora</h2>
+    <p>Primer Operador: </p>
+    <input type="number" id="x">
+    <p>Segundo Operador: </p>
+    <input type="number" id="y">
+    <br>
+    <button id="calcular">Calcular</button>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById("calcular").addEventListener("click", function () {
+            let x = parseFloat(document.getElementById("x").value);
+            let y = parseFloat(document.getElementById("y").value);
+            let z = x + y;
+
+            // Crear un elemento para mostrar el resultado
+            let resultadoElement = document.createElement("p");
+            resultadoElement.textContent = "Resultado: " + x+ "+"+ y+"="+ z;
+
+            // Agregar el elemento al div con ID "resultado"
+            document.getElementById("resultado").innerHTML = ""; // Borra cualquier contenido anterior
+            document.getElementById("resultado").appendChild(resultadoElement);
+        });
+    </script>
+</body>
+</html>
