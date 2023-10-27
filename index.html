@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Juegos JavaScript</h1>
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">HalfSeven</a></li>
+            <li><a href="">Chess</a></li>
+        </ul>
+    </header>
+    <main>
+        <h2 id="titulo">Titulo</h2>
+        <div id="game" style="background-color: pink; height: 50px;">
+            <h1>7 y 1/2</h1>
+            <div id="botones">
+                <input type="button" value="Inicializar" onclick="controlador.inicializar()" />
+
+                <input type="button" value="Mostrar Baraja" onclick="controlador.mostrarBaraja()" />
+                <input type="button" value="Ocultar Baraja" onclick="controlador.ocultarBaraja()" />
+
+                <button id="btnContinuar" onclick="controlador.juego();" disabled>
+                    Continuar
+                </button>
+                <button id="btnTerminar" onclick="controlador.finPartida()" disabled>
+                    Terminar
+                </button>
+            </div>
+            <div id="jugadores">
+                <div id="div-usuario">
+                    <h2 id="nombre-usuario">Usuario</h2>
+                    <h2 id="puntos-usuario">4 puntos.</h2>
+                </div>
+                <div id="cartas-usuario">
+                    <img  id="04-oros" src="/images/oros_07-195x300.png" alt="carta">
+                </div>
+            </div>
+            <div id="info">
+                <h2 id="numeroCartas"></h2>
+                <h2 id="resultado"></h2>
+            </div>
+            <div id="baraja" hidden></div>
+
+            <div id="jugadores"></div>
+
+            <div id="principal"></div>
+            <script src="./script.js"></script>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
