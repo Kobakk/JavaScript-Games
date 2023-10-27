@@ -101,22 +101,20 @@ let carta = {
   
   // Jugador
   let jugador = {
-    nombre: "",
-    cartasMano: [],
-    puntos: 0,
-    terminar: false,
-  
+    nombre: "", cartasMano: [], puntos: 0, terminar: false,
     inicializar() {
       this.cartasMano = [];
       this.puntos = 0;
       this.terminar = false;
     },
-  
     // Devuelve una carta de la baraja
-    pedirCarta: function () {},
-  
+    pedirCarta: function () {
+      return this.cartasMano[0];
+    },
     // Pide una carta de la baraja, controla los puntos y si se ha pasado del tope
-    jugar: function (tope) {},
+    jugar: function (tope) {
+
+    },
   };
   
   let jugador1 = Object.create(jugador);
@@ -233,10 +231,14 @@ let carta = {
     //   </div>
     // </div>
   
-    dibujarJugador(jugador, dst) {},
+    dibujarJugador(jugador, dst) {
+
+    },
   
     // Controla el juego, se llama desde el boton continuar
-    juego() {},
+    juego() {
+
+    },
   
     //El jugador 1 se planta, lo llama el botón terminar
     finPartida() {
