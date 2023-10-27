@@ -5,5 +5,5 @@
 ### Salvaguardas
 - Movimiento piezas, control de exepciones
 # Cards Game
-- Cartas, Barajas
+- Cartas, Barajas, Usuarios
 
